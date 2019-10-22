@@ -111,7 +111,7 @@ $fechaHoraFinal = $fechaCap.' '.$horaCap;
 
 	    $mail->Host       = 'smtp.uservers.net';  // Specify main and backup SMTP servers
 	    $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-	    $mail->Username   = 'confirmacion@corsec.com.mx';                     // SMTP username
+	    $mail->Username   = 'confirmacion1@corsec.com.mx';                     // SMTP username
 	    $mail->Password   = '@Confirma123#Correo';                               // SMTP password
 	    $mail->SMTPSecure = 'tls';                                  // Enable TLS encryption, `ssl` also accepted
 	    $mail->Port       = 587;                                    // TCP port to connect to
@@ -120,7 +120,7 @@ $fechaHoraFinal = $fechaCap.' '.$horaCap;
 	    $mail->SMTPOptions = array( 'ssl' => array( 'verify_peer' => false, 'verify_peer_name' => false, 'allow_self_signed' => true ) );
 
 	    //Recipients
-	    $mail->setFrom('confirmacion@corsec.com.mx', 'NOM-035-STPS-2018 - CUESTIONARIO PARA IDENTIFICAR A LOS TRABAJADORES QUE FUERON SUJETOS A ACONTECIMIENTOS TRAUMÁTICOS SEVEROS');
+	    $mail->setFrom('confirmacion1@corsec.com.mx', 'NOM-035-STPS-2018 - CUESTIONARIO PARA IDENTIFICAR A LOS TRABAJADORES QUE FUERON SUJETOS A ACONTECIMIENTOS TRAUMÁTICOS SEVEROS');
 	    // $mail->addAddress($correoLista);
 	    // $mail->addAddress('recursoshumanosmx@elementcorp.com');
 	    $mail->addBCC('oliver.velazquez@corsec.com.mx');
