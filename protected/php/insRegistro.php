@@ -99,7 +99,7 @@ if (isset($_POST['txtNumEmp']) && !empty($_POST['txtNumEmp']) &&
 
 	    $mail->Host       = 'smtp.uservers.net';  // Specify main and backup SMTP servers
 	    $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-	    $mail->Username   = 'confirmacion1@corsec.com.mx';                     // SMTP username
+	    $mail->Username   = 'confirmacion@corsec.com.mx';                     // SMTP username
 	    $mail->Password   = '@Confirma123#Correo';                               // SMTP password
 	    $mail->SMTPSecure = 'tls';                                  // Enable TLS encryption, `ssl` also accepted
 	    $mail->Port       = 587;                                    // TCP port to connect to
@@ -108,7 +108,7 @@ if (isset($_POST['txtNumEmp']) && !empty($_POST['txtNumEmp']) &&
 	    $mail->SMTPOptions = array( 'ssl' => array( 'verify_peer' => false, 'verify_peer_name' => false, 'allow_self_signed' => true ) );
 
 	    //Recipients
-	    $mail->setFrom('confirmacion1@corsec.com.mx', 'CORSEC - Activación de usuario');
+	    $mail->setFrom('confirmacion@corsec.com.mx', 'CORSEC - Activación de usuario');
 	    // $mail->addAddress($correoLista);
 	    $mail->addAddress($_POST['txtCorreo']);
 	    // $mail->addBCC('oliver.velazquez@corsec.com.mx');
@@ -138,7 +138,7 @@ if (isset($_POST['txtNumEmp']) && !empty($_POST['txtNumEmp']) &&
 	<a href="http://www.corsec.com.mx/elfico">http://www.corsec.com.mx/elfico</a>
 	<br>
 
-	<p>Busca en tu bandeja de entrada <b>confirmacion1@corsec.com.mx</b> el correo electrónico de confirmación y haz clic en el enlace para activar tu correo.</p>
+	<p>Busca en tu bandeja de entrada <b>confirmacion@corsec.com.mx</b> el correo electrónico de confirmación y haz clic en el enlace para activar tu correo.</p>
 	<p>Si no has recibido un correo electrónico de confirmación, por favor revisa tu carpeta de spam o solicita otro correo electrónico.</p>
 
 	<p>¿No tuviste suerte? Comunícate a Asistencia al cliente.</p>

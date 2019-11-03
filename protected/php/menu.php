@@ -72,7 +72,7 @@ if (isset($_SESSION['usrActivo']) && !empty($_SESSION['usrActivo']) &&
 								    	</div>
 								    </div>
 
-								    <!-- <div class="card">
+								    <div class="card">
 								    	<div class="card-header">
 								    		<h2 class="mb-0">
 								    			<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#guia02" aria-expanded="false">
@@ -90,9 +90,9 @@ if (isset($_SESSION['usrActivo']) && !empty($_SESSION['usrActivo']) &&
 								        		</div>	
 								    		</div>
 								    	</div>
-								    </div> -->
+								    </div>
 
-								    <!-- <div class="card">
+								    <div class="card">
 								    	<div class="card-header">
 								    		<h2 class="mb-0">
 								    			<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#guia03" aria-expanded="false">
@@ -110,7 +110,7 @@ if (isset($_SESSION['usrActivo']) && !empty($_SESSION['usrActivo']) &&
 								        		</div>	
 								    		</div>
 								    	</div>
-								    </div> -->
+								    </div>
 
 								    <!-- <div class="card">
 								    	<div class="card-header">
@@ -125,9 +125,9 @@ if (isset($_SESSION['usrActivo']) && !empty($_SESSION['usrActivo']) &&
 								    		 	Política de prevención de riesgos psicosociales.
 								    		</div>
 								    	</div>
-								    </div>
+								    </div> -->
 
-								    <div class="card">
+								    <!-- <div class="card">
 								    	<div class="card-header">
 								    		<h2 class="mb-0">
 								    			<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#guia05" aria-expanded="false">

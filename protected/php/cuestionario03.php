@@ -31,99 +31,7 @@ if (isset($_SESSION['usrActivo']) && !empty($_SESSION['usrActivo']) &&
 	<link rel="stylesheet" href="../css/all.css">
 	<link rel="stylesheet" href="../css/animate.css">
 	<link rel="stylesheet" href="../css/style.css">
-	<style>
-
-/*#######################
-RADIOBUTTOM
-#######################*/
-
-@keyframes click-wave {
-  0% {
-    height: 40px;
-    width: 40px;
-    opacity: 0.35;
-    position: relative;
-  }
-  100% {
-    height: 200px;
-    width: 200px;
-    margin-left: -80px;
-    margin-top: -80px;
-    opacity: 0;
-  }
-}
-
-.option-input {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  -o-appearance: none;
-  appearance: none;
-  position: relative;
-  top: 13.33333px;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  height: 40px;
-  width: 40px;
-  transition: all 0.15s ease-out 0s;
-  background: #cbd1d8;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-  display: inline-block;
-  margin-right: 0.5rem;
-  outline: none;
-  position: relative;
-  z-index: 1000;
-}
-.option-input:hover {
-  background: #9faab7;
-}
-.option-input:checked {
-  background: #80BD01;
-}
-.option-input:checked::before {
-  height: 40px;
-  width: 40px;
-  position: absolute;
-  content: '✔';
-  display: inline-block;
-  font-size: 26.66667px;
-  text-align: center;
-  line-height: 40px;
-}
-.option-input:checked::after {
-  -webkit-animation: click-wave 0.65s;
-  -moz-animation: click-wave 0.65s;
-  animation: click-wave 0.65s;
-  background: #80BD01;
-  content: '';
-  display: block;
-  position: relative;
-  z-index: 100;
-}
-.option-input.radio {
-  border-radius: 50%;
-}
-.option-input.radio::after {
-  border-radius: 50%;
-}
-.lvdeTexto{
-
-	margin-top: 30px;
-	width: 100px;
-}
-
-@media only screen and (max-width: 576px) {
-  .lvdeTexto{
-  		
-		width: 150px;
-	}
-}
-
-	</style>
-
+	<link rel="stylesheet" href="../css/cuestionarioDos.css">
 	
 </head>
 <body>
@@ -131,6 +39,7 @@ RADIOBUTTOM
 
 	 <div class="container-fluid animated fadeIn" <?php echo $ocultar; ?>>
 	 	<form action="../guiaR03/guardar.aspx" method="POST">
+
 	 	<div class="row">
 	 			<div class="p-0 fixed-top">
 		 		<nav class="navbar navbar-expand-lg navbar-light bg-primary">
@@ -1049,7 +958,7 @@ RADIOBUTTOM
 								<b>Las preguntas siguientes están relacionadas con la atención a clientes y usuarios.</b>
 								<br>
 								<br>
-								<div class="accordion btn-toggle" id="preguntaB7">
+								<div id="app">
 								<table class="table mb-5">
 								<tbody>
 								
@@ -1057,17 +966,19 @@ RADIOBUTTOM
 								<td class="pt-md-4 pt-5">En mi trabajo debo brindar servicio a clientes o usuarios:</td>
 								<td>
 		 							<div class="form-check form-check-inline">
-		 								<input class="option-input radio" type="checkbox" name="optActOptUno" value="1" data-toggle="collapse" data-target="#preC01" aria-expanded="true">
+		 								<input class="option-input radio" type="radio" name="optActOptUno" value="1" @click="c13Opt = '."'".'mostrar'."'".'" required>
 		 								<label class="form-check-label" style="margin-top: 25px; margin-right:20px;">Sí</label>
+		 							</div>
+		 							<div class="form-check form-check-inline">
+		 								<input class="option-input2 radio" type="radio" name="optActOptUno" value="0" @click="c13Opt = '."'".'ocultar'."'".'" required>
+		 								<label class="form-check-label" style="margin-top: 25px; margin-right:20px;">No</label>
 		 							</div>
 		 						</td>
 								
 		 						</tbody>
 								</table>
-								</div>
 								';
 
-							echo '<div id="preC01" class="collapse" data-parent="#preguntaB7">';
 
 							// PREGUNTAS C13 COLLAPSE
 
@@ -1075,10 +986,12 @@ RADIOBUTTOM
 							echo '
 								<br>
 								<hr>
+
 								<div class="my-5 my-md-4 ">
 								<b>Si su respuesta fue "SÍ", responda las preguntas siguientes. Si su respuesta fue "NO" pase a las preguntas de la sección siguiente.</b>
 								<br>
 								<br>
+								<div v-if="c13Opt === '."'".'mostrar'."'".'">
 								<table class="table mb-5">
 								<tbody>
 								';
@@ -1140,7 +1053,6 @@ RADIOBUTTOM
 								<b>Las preguntas siguientes están relacionadas con las actitudes de las personas que supervisa.</b>
 								<br>
 								<br>
-								<div class="accordion btn-toggle" id="preguntaC14">
 								<table class="table mb-5">
 								<tbody>
 								
@@ -1148,17 +1060,18 @@ RADIOBUTTOM
 								<td class="pt-md-4 pt-5">Soy jefe de otros trabajadores:</td>
 								<td>
 		 							<div class="form-check form-check-inline">
-		 								<input class="option-input radio" type="checkbox" name="optActOptUno" value="1" data-toggle="collapse" data-target="#preC02" aria-expanded="true">
+		 								<input class="option-input radio" type="radio" name="optActOptUno" value="1" @click="c14Opt = '."'".'mostrar'."'".'" required>
 		 								<label class="form-check-label" style="margin-top: 25px; margin-right:20px;">Sí</label>
+		 							</div>
+		 							<div class="form-check form-check-inline">
+		 								<input class="option-input2 radio" type="radio" name="optActOptUno" value="0" @click="c14Opt = '."'".'ocultar'."'".'" required>
+		 								<label class="form-check-label" style="margin-top: 25px; margin-right:20px;">No</label>
 		 							</div>
 		 						</td>
 								
 		 						</tbody>
 								</table>
-								</div>
 								';
-
-							echo '<div id="preC02" class="collapse" data-parent="#preguntaC14">';
 
 							// PREGUNTAS C14 COLLAPSE
 
@@ -1170,6 +1083,7 @@ RADIOBUTTOM
 								<b>Si su respuesta fue "SÍ", responda las preguntas siguientes. Si su respuesta fue "NO", ha concluido el cuestionario.</b>
 								<br>
 								<br>
+								<div v-if="c14Opt === '."'".'mostrar'."'".'">
 								<table class="table mb-5">
 								<tbody>
 								';
@@ -1218,6 +1132,7 @@ RADIOBUTTOM
 							</tbody>
 							</table>
 							</div>
+							</div>
 							</div>';
 
 
@@ -1236,7 +1151,9 @@ RADIOBUTTOM
 
 	<script src="../js/jquery-3.3.1.slim.min.js"></script>
 	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/vue.js"></script>
 	<script src="../js/forms.js"></script>
+	<script src="../js/oForm03.js"></script>
 
 </body>
 </html>
